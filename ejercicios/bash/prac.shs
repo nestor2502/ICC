@@ -1,0 +1,18 @@
+#!/bin/bash
+# script  para busqueda  de archivos 
+
+"Hola este es un programa para encontrar el archivo que necesitas en la direccion  /etc "
+
+#Solicitamos el patron de busqueda 
+ls /etc/
+echo "Estos son los qrchivos que hay dentro de /etc/"
+echo" ingresa el tipo de archivo que deseas buscar "
+
+read tipo 
+
+find /etc/ -name *.tipo
+
+
+
+
+
