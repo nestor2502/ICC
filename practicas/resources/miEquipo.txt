@@ -1,0 +1,75 @@
+procesos que se estaban ejecutando en mi pc en tiempo real
+
+[7m  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM     HORA+ ORDEN       (B[m[39;49m[K
+(B[m17656 nestor2+  20   0  994136  53676  39096 S  12.5  0.7   0:01.94 nautilus    (B[m[39;49m[K
+(B[m[1m20688 nestor2+  20   0   51424   4340   3656 R   6.2  0.1   0:00.01 top         (B[m[39;49m[K
+(B[m    1 root      20   0  225744   9492   6648 S   0.0  0.1   0:32.47 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0.0  0.0   0:00.10 kthreadd    (B[m[39;49m[K
+(B[m    4 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 kworker/0:+ (B[m[39;49m[K
+(B[m    6 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 mm_percpu_+ (B[m[39;49m[K
+(B[m    7 root      20   0       0      0      0 S   0.0  0.0   0:00.89 ksoftirqd/0 (B[m[39;49m[K
+(B[m    8 root      20   0       0      0      0 I   0.0  0.0   0:58.13 rcu_sched   (B[m[39;49m[K
+(B[m    9 root      20   0       0      0      0 I   0.0  0.0   0:00.00 rcu_bh      (B[m[39;49m[K
+(B[m   10 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 migration/0 (B[m[39;49m[K
+(B[m   11 root      rt   0       0      0      0 S   0.0  0.0   0:01.63 watchdog/0  (B[m[39;49m[K
+(B[m   12 root      20   0       0      0      0 S   0.0  0.0   0:00.00 cpuhp/0     (B[m[39;49m[K
+(B[m   13 root      20   0       0      0      0 S   0.0  0.0   0:00.00 cpuhp/1     (B[m[39;49m[K
+(B[m   14 root      rt   0       0      0      0 S   0.0  0.0   0:01.60 watchdog/1  (B[m[39;49m[K
+(B[m   15 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 migration/1 (B[m[39;49m[K
+(B[m   16 root      20   0       0      0      0 S   0.0  0.0   0:00.59 ksoftirqd/1 (B[m[39;49m[K
+(B[m   18 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 kworker/1:+ (B[m[39;49m[K
+
+Informacion de mi equipo:
+
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+loop0    7:0    0   2.2M  1 loop /snap/gnome-calculator/222
+loop1    7:1    0  14.5M  1 loop /snap/gnome-logs/40
+loop2    7:2    0    13M  1 loop /snap/gnome-characters/117
+loop3    7:3    0  87.9M  1 loop /snap/core/5328
+loop4    7:4    0    21M  1 loop /snap/gnome-logs/25
+loop5    7:5    0  86.9M  1 loop /snap/core/4917
+loop6    7:6    0   3.3M  1 loop /snap/gnome-system-monitor/36
+loop7    7:7    0  14.5M  1 loop /snap/gnome-logs/37
+loop8    7:8    0   3.7M  1 loop /snap/gnome-system-monitor/51
+loop9    7:9    0   2.3M  1 loop /snap/gnome-calculator/180
+loop10   7:10   0  34.7M  1 loop /snap/gtk-common-themes/319
+loop11   7:11   0  12.2M  1 loop /snap/gnome-characters/69
+loop12   7:12   0    13M  1 loop /snap/gnome-characters/103
+loop13   7:13   0   2.3M  1 loop /snap/gnome-calculator/199
+loop14   7:14   0   140M  1 loop /snap/gnome-3-26-1604/59
+loop15   7:15   0 175.8M  1 loop /snap/atom/190
+loop16   7:16   0    87M  1 loop /snap/core/5145
+loop17   7:17   0 140.9M  1 loop /snap/gnome-3-26-1604/70
+loop18   7:18   0   3.7M  1 loop /snap/gnome-system-monitor/54
+loop20   7:20   0 181.2M  1 loop /snap/atom/191
+loop21   7:21   0 177.5M  1 loop /snap/atom/192
+sda      8:0    0 465.8G  0 disk 
+├─sda1   8:1    0 182.5G  0 part 
+├─sda2   8:2    0     1K  0 part 
+├─sda3   8:3    0 282.9G  0 part /
+└─sda5   8:5    0   476M  0 part [SWAP]
+sr0     11:0    1  1024M  0 rom  
+
+
+Comandos utilizados:
+  
+  338  cd Nestorvazquez
+  339  ls
+  340  tree
+  341  C-h t
+  342  top
+  343  ls
+  344  cd practicas/resources
+  345  ls
+  346  top
+  347  top | cat > miEquipo.txt
+  348  ls
+  349  emacs miEquipo.txt
+  350  history 5 | cat >> miEquipo.txt
+  351  emacs miEquipo.txt
+  352  sudo lsblk-fm
+  353  lsblk
+  354  emacs miEquipo.txt
+  355  lsblk | cat >> miEquipo.txt
+  356  history 20 | cat >> miEquipo.txt
+  
