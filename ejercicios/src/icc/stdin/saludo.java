@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class saludo {
+    public static void main(String [] args){
+	Scanner teclado= new Scanner (System.in); 
+	String a;
+	int b;
+	double c,d;
+	System.out.println("Hola ingresa tu nombre:");
+	a= teclado.nextLine();
+	System.out.println("Wow me encanta en nombre "+ a );
+        System.out.println();
+	
+	System.out.println("¿Cuantos años tienes?");
+	b= teclado.nextInt();
+	if(b<18)
+	System.out.println("En serio tienes "+ b+" años?? , awwwwww aun eres menor de edad");
+
+	System.out.println("Ahora ingresa 2 numeros:");
+	c= teclado.nextDouble();
+        System.out.println("Ingresa el segundo:");
+	d= teclado.nextDouble();
+	if(c > d){
+	    System.out.println(c+" es mayor que "+d);
+	}
+	else{
+	    System.out.println(d+" es mayor que "+c);
+
+	    
+	}
+    }
+
+
+
+}

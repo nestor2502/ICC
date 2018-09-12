@@ -1,0 +1,23 @@
+package icc.stdin;
+/**
+ *uso de entrada estandar
+ *@author Nestor
+ *@version 1.0
+ *@date 12/09/18
+ */
+
+public class Miprograma{
+    /**
+     *Metodo principal
+     *@param args argumentos del metodo
+     *
+     *
+     */
+    public static void main (String [] args){
+
+	//declaracion de variables al inicio      
+     }
+
+
+
+}
