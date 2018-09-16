@@ -1,0 +1,6 @@
+debconf.conf:Filename: /var/cache/debconf/config.dat
+debconf.conf:Filename: /var/cache/debconf/passwords.dat
+debconf.conf:Filename: /var/cache/debconf/templates.dat
+Filename: /var/cache/debconf/config.dat
+Filename: /var/cache/debconf/passwords.dat
+Filename: /var/cache/debconf/templates.dat
