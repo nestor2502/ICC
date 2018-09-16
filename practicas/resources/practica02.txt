@@ -1,7 +1,32 @@
-1.- Proporciona la sintaxis de uso de un comando con rutas relativas y rutas absolutas
+1.-
+ Proporciona la sintaxis de uso de un comando con rutas relativas y rutas absolutas
 
 Crear un directorio con:
 Ruta absoluta:   mkdir /home/"nombre de usuario"/ "nombre del nuevo directorio "
 Ruta relativa:  (se crearara la carpeta en la posicion actual) mkdir "Nombre del nuevo directorio"
 
+2.-
+Enlace simbolico: Sirva para crear un "acceso directo" como se le llama comunmemte en windows, su caracteristica es que solamenmte crea una copia enlazada al arcivo origina, ademas de que si se elimina, solamente se pierde el enlace y no el archivo al que se enlazó.
+
+Enlace rigido: Crea el mismo el mismo archivo en otra ruta, pero en este caso si elimina, tambien se elimina el archivo a l que se enlazó.
+ 
+3.-
+Utilice un Script que habiamos creado con anterioridad para ubicar la posicion del documento requerido, luego solamente utilizamos el comanto correspondiente para copiar directorios o archivos (cp /etc/debconf.conf /home/nestor2502/Netsorvazquez/practicas/resources)
+
+4.- 
+debconf.conf:Filename: /var/cache/debconf/config.dat
+debconf.conf:Filename: /var/cache/debconf/passwords.dat
+debconf.conf:Filename: /var/cache/debconf/templates.dat
+Filename: /var/cache/debconf/config.dat
+Filename: /var/cache/debconf/passwords.dat
+Filename: /var/cache/debconf/templates.dat
+Se utilizó:grep Filename debconf.conf | cat >> practica02.txt
+
+
+1.-Al momento de compilar el archivo Main.java localizado en el almacen https://github.com/lngallo/LeonardoGallo habian muchos errores:
+2.- Error de ortografia en la palabra decía "pakage" debe ser "package" 
+3.- Faltaba cerrar una linea utilizando ";"
+4.- La palabra reservada "String" estaba con la primera letra en minusculas 
+5.- Una variable en el tipo de dato int se estaba igualando a una cadena de texto y esto no puede ser ya que solamente acepta valores numericos enteros
+6.- El tipo de dato tenia una variable como cadena de texto mienytras que esta unicamente almacena bytes.
 
