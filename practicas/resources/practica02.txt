@@ -1,0 +1,7 @@
+1.- Proporciona la sintaxis de uso de un comando con rutas relativas y rutas absolutas
+
+Crear un directorio con:
+Ruta absoluta:   mkdir /home/"nombre de usuario"/ "nombre del nuevo directorio "
+Ruta relativa:  (se crearara la carpeta en la posicion actual) mkdir "Nombre del nuevo directorio"
+
+
