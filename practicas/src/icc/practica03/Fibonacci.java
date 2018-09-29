@@ -1,4 +1,4 @@
-//package icc.practica03;
+package icc.practica03;
 
 import java.util.Scanner;
 public class Fibonacci {
@@ -16,7 +16,7 @@ num= to +t;
 to= t;
 t= num;
 }
-System.out.println(num);
+System.out.println("El numero fibonacci en la posicion " +k+ " es: "+num);
 }
 
 
