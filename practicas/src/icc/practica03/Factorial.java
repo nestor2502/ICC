@@ -1,5 +1,10 @@
 package icc.practica03;
-
+/**
+*
+*@author(Nestorvazquez)
+*
+*
+*/
 import java.util.Scanner;
 public class Factorial{
 public static void main (String [] args){
