@@ -6,25 +6,43 @@ package icc.practica03;
 */
 public class Palindromo{
 
+	public static void main(String[] args) {
+
+		Scanner teclado = new Scanner(System.in);
+
+		int longitudCadena ;
+    	String = cadena, cadenaComparada = "";
+    	boolean palindromo = true;
+
+    	System.out.print("Ingresa la cadena: ");
+    	cadena = teclado.nextLine();
+
+    	longitudCadena = cadena.length();
+
+    	for(int i = 0; i <= (longitudCadena - 1); i++){
+
+    		cadenaComparada = cadena.charAt(i) + cadenaComparada;
+    	
+    	}
+
+    	for(int i = 0; i <= (longitudCadena)-1: i++){
+
+    		if(cadenaComparada.charAt(i) != cadena.CharAt}(i)){
+
+    			palindromo = false;
+    		}
+    	}
+
+    	if(palindromo = true){
+
+    		System.out.println("\nPalindromo")
+    	}else{
+
+    		System.out.println("\nNo Palindromo")
+    	}
 
 
-	    int inc = 0;
-    int des = sPalabra.length()-1;
-    boolean bError = false;
-    
-    
-    while ((inc<des) && (!bError)){
- 
-	if (sPalabra.charAt(inc)==sPalabra.charAt(des)){				
-		inc++;
-		des--;
-	} else {
-		bError = true;
-	}
 }
-if (!bError)
-    	System.out.println(sPalabra + " es un PALINDROMO");
-    else
-    	System.out.println(sPalabra + " NO es un palindromo");
 }
+    
     

@@ -14,11 +14,12 @@ public class Funcion {
      * COMÉNTAME
      * @param cadena
      * @param numero
-     
+     */
     public static void  imprimeNVeces(String cadena, int n) {
 	//aquí va tu implementación
         for(int i=0; i<=n;i++){
-            System.out.println(cadena);}
+            System.out.println("" + cadena);}
+    
         }
     
 ////Metodo 
@@ -29,7 +30,7 @@ public class Funcion {
    cadena= teclado.nextLine();
    System.out.println("¿cuantas veces quieres imprimir la cadena?");
     num= teclado.nextInt();
-     ImprimeVNveces(cadena, num);
+     imprimeNV2eces(cadena, num);
 
     }
     //////////////////////////////////// 2 /////////////////////////////////////////////
@@ -81,6 +82,8 @@ public class Funcion {
      */
     public static int calculaSerieGeometrica(int numero) {
 	//aquí va tu implementación
+        double s; 
+      //  si= ((1*(1-Math.pow(1/2,numero)))/1-(1/2))-1;
 	return 0;
     }
     /////////////////////////////////////// 5 ////////////////////////////////////////////////
@@ -140,6 +143,7 @@ System.out.println("El resultado de la suma es:" + j);}
      */
     public static int calculaAckermann(int m, int n) {
 	//aquí va tu implementación
+
 	return 0;
     }
     ///////////////////////////////////////// 8 /////////////////////////////////////////////////////
@@ -181,12 +185,12 @@ if(opc >0 && opc< 9 ){
 switch(opc){
 case 1: F1();break;
 case 2: F2();break; 
-case 3: uso.buscaPalabra();break;
-case 4: uso.calculaSerieGeometrica();break;
-case 5: F5();break;
-case 6: F6();break;
-case 7: uso.calculaAckermann();break;
-case 8: uso.calculaAckermannIterativo();break;
+case 3: System.out.println("Aun no esta disponible");break;
+case 4: System.out.println("Aun no esta disponible");break;
+case 5:F5();break;
+case 6:F6();break;
+case 7:System.out.println("Aun no esta disponible");break;
+case 8:System.out.println("Aun no esta disponible");break;
 default:System.out.println("Opcion incorrecta"); break;
 }
 }
@@ -194,7 +198,7 @@ default:System.out.println("Opcion incorrecta"); break;
 
 }
 
-
+/**
 public static void main (String [] args){
     // SE llama al objeto Funcion y Scanner
 Funcion gh = new Funcion();
@@ -202,5 +206,5 @@ Scanner teclado= new Scanner (System.in);
 //Se declaran variables 
 gh.Menu();
 }
-
+*/
 } 
