@@ -16,13 +16,13 @@ public class Funcion {
      * @param numero
      */
     public static void  imprimeNVeces(String cadena, int n) {
-	//aquí va tu implementación
+	  //aquí va tu implementación
         for(int i=0; i<=n;i++){
             System.out.println("" + cadena);}
     
         }
     
-////Metodo 
+      ////Metodo 
     public void F1(){
         String cadena;
         int num;
@@ -30,7 +30,7 @@ public class Funcion {
    cadena= teclado.nextLine();
    System.out.println("¿cuantas veces quieres imprimir la cadena?");
     num= teclado.nextInt();
-     imprimeNV2eces(cadena, num);
+     imprimeNVeces(cadena, num);
 
     }
     //////////////////////////////////// 2 /////////////////////////////////////////////
@@ -40,31 +40,30 @@ public class Funcion {
      * @param c
      */
     public static int buscaCaracter(String cadena, char c) {
-    //aquí va tu implementación
-    int j=0;
-    for (int i=0; i<cadena.length();i++){
-     int as= cadena.charAt(i);
-     if(as==c)
-        j++;
-    }
-    return j;
-    }
-    // Metodo 
-    public void F2(){
+     //aquí va tu implementación
+      int j=0;
+      for (int i=0; i<cadena.length();i++){
+         int as= cadena.charAt(i);
+         if(as==c)
+         j++;
+         }
+     return j;
+     }
+     // Metodo 
+     public void F2(){
 
-    Scanner teclado = new Scanner (System.in);
+       Scanner teclado = new Scanner (System.in);
    
-    String cad;
-    char num;
-    int can;
-    System.out.println("Hola ingresa una cadena");
-    cad= teclado.nextLine();
-    System.out.println("ingresa la letra que deseas contar dentro de la cadena");
-    num = teclado.next().charAt(0);
-    can= buscaCaracter(cad, num);
-    System.out.println("la letra " + num+ "aparece " +can+" veces");
-    
-    }
+       String cad;
+       char num;
+       int can;
+       System.out.println("Hola ingresa una cadena");
+       cad= teclado.nextLine();
+       System.out.println("ingresa la letra que deseas contar dentro de la cadena");
+       num = teclado.next().charAt(0);
+       can= buscaCaracter(cad, num);
+        System.out.println("la letra " + num+ " aparece " +can+" veces");
+         }
     ////////////////////////////////// 3 //////////////////////////////////////////////// 
     /**
      * Nos dice el número de veces que aparece una palabra en una oración
@@ -80,12 +79,40 @@ public class Funcion {
      * COMÉNTAME
      *
      */
-    public static int calculaSerieGeometrica(int numero) {
+    public static double calculaSerieGeometrica(int numero) {
 	//aquí va tu implementación
-        double s; 
-      //  si= ((1*(1-Math.pow(1/2,numero)))/1-(1/2))-1;
-	return 0;
+        double s,j, a, b, c, d;
+        j= numero +1; 
+       //s= ((1*(1-Math.pow(1/2,numero)))/1-(1/2))-1;
+      // s= ((1-(Math.pow((1/2),j)))/(1-(1/2)))-1;
+      a= Math.pow((0.5),j);
+      b= 1-a;
+      c=b/(0.5);
+      d= c-1;
+	return d;
     }
+
+    //Metodo
+        public void F4(){
+        Scanner teclado = new Scanner(System.in);
+        int numero;
+        int p;
+        double c, d, e;
+        System.out.println("Cuantos terminos de la serie geometrica deseas calcular: ");
+       numero = teclado.nextInt();
+       p = (int)Math.pow(2,numero);
+       for(int i=1; i <= numero ;i++){
+        d=  (int)Math.pow(2,i);
+        e= (int)d;
+        if (i<numero){
+       System.out.print("1/"+ d+" + ");}
+       if(i==numero){
+        System.out.println("1/"+d);
+       }
+     }
+     c= calculaSerieGeometrica(numero);
+     System.out.println(c);
+     }
     /////////////////////////////////////// 5 ////////////////////////////////////////////////
     /**
      * COMÉNTAME
@@ -157,7 +184,7 @@ System.out.println("El resultado de la suma es:" + j);}
     }
 
 
-public void Menu(){
+public void usaMenu(){
     
 Scanner teclado= new Scanner (System.in);
 //Se declaran variables 
@@ -174,7 +201,7 @@ System.out.println("Selecciona lo que deseas realizar ");
 System.out.println("1) Recibe una cadena s y un entero n , e imprime n veces la cadena s ");
 System.out.println("2) recibe una cadena y un caracter, devuelve el numero de apariciones del caracter en la cadena.");
 System.out.println("3) recibe dos cadenas, la segunda corresponde a la palabra a buscar en la primer cadena, devuelve el numero de apariciones.");
-System.out.println("4) recibe un entero n e imprime los primetos n terminos de la serie geometrica, ademas devuelve el valor de la suma.");
+System.out.println("4) recibe un entero n e imprime los primeros n terminos de la serie geometrica, ademas devuelve el valor de la suma.");
 System.out.println("5) recibe una cadena y devuelve su reversa");
 System.out.println("6) recibe una cadena y devuelve el resultado de sumar el valor numerico de cada caracter que compone la cadena.");
 System.out.println("7) recibe dos numeros naturales (m,n) y devuelve un entero resultado de evaluar m y n en la funcion de Ackerman");
@@ -185,8 +212,8 @@ if(opc >0 && opc< 9 ){
 switch(opc){
 case 1: F1();break;
 case 2: F2();break; 
-case 3: System.out.println("Aun no esta disponible");break;
-case 4: System.out.println("Aun no esta disponible");break;
+case 3: F4();break;
+case 4:F4();break;
 case 5:F5();break;
 case 6:F6();break;
 case 7:System.out.println("Aun no esta disponible");break;
