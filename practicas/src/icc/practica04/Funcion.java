@@ -7,11 +7,13 @@ package icc.practica04;
  * @version 05/10/2018
  */
 import java.util.Scanner;
+import java.util.StringTokenizer;
+
 public class Funcion {
     Scanner teclado = new Scanner(System.in);
     ///////////////////////////////// 1 /////////////////////////////////////////////
     /**
-     * COMÉNTAME
+     * 
      * @param cadena
      * @param numero
      */
@@ -35,7 +37,7 @@ public class Funcion {
     }
     //////////////////////////////////// 2 /////////////////////////////////////////////
     /**
-     * COMÉNTAME
+     * 
      * @param cadena
      * @param c
      */
@@ -70,13 +72,54 @@ public class Funcion {
      * @param oracion
      * @param palabra
      */
-    public static int buscaPalabra(String oracion, String palabra) {
-	//aquí va tu implementación
-	return 0;
+    public static int buscaPalabra(String oracion, String palabra){
+Scanner teclado = new Scanner(System.in);
+
+StringTokenizer tok = new StringTokenizer(oracion);
+
+int contador=0;
+
+while(tok.hasMoreTokens()) {
+
+            if(tok.nextElement().equals(palabra)) {
+
+                contador++;
+
+            }
+
+        }
+return contador; 
+
+
+}
+//// Metodo
+public void F3() {
+        int veces;
+
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Introduce una frase: ");
+        String frase = teclado.nextLine().toLowerCase();
+
+        StringTokenizer tok = new StringTokenizer(frase);
+
+
+        String palabraBuscar;
+
+
+        int contador = 0;
+
+ 
+
+        System.out.print("Introduce la palabra a contar: ");
+
+        palabraBuscar = teclado.nextLine().toLowerCase();
+
+        veces= buscaPalabra(frase, palabraBuscar);
+        System.out.println("La frase '" + frase + "'\ncontine " + veces + " veces la palabra '" + palabraBuscar + "'");
     }
 	//////////////////////////////////// 4 ////////////////////////////////////////////////// 
     /**
-     * COMÉNTAME
+     * @param numero
      *
      */
     public static double calculaSerieGeometrica(int numero) {
@@ -84,12 +127,12 @@ public class Funcion {
         double s,j, a, b, c, d;
         j= numero +1; 
        //s= ((1*(1-Math.pow(1/2,numero)))/1-(1/2))-1;
-      // s= ((1-(Math.pow((1/2),j)))/(1-(1/2)))-1;
+       s= ((1-(Math.pow((0.5),j)))/(1-(0.5)))-1;
       a= Math.pow((0.5),j);
       b= 1-a;
       c=b/(0.5);
       d= c-1;
-	return d;
+	return s;
     }
 
     //Metodo
@@ -102,20 +145,20 @@ public class Funcion {
        numero = teclado.nextInt();
        p = (int)Math.pow(2,numero);
        for(int i=1; i <= numero ;i++){
-        d=  (int)Math.pow(2,i);
-        e= (int)d;
-        if (i<numero){
-       System.out.print("1/"+ d+" + ");}
-       if(i==numero){
-        System.out.println("1/"+d);
-       }
+           d=  (int)Math.pow(2,i);
+         e= (int)d;
+         if (i<numero){
+             System.out.print("1/"+ d+" + ");}
+         if(i==numero){
+             System.out.println("1/"+d);
+           }
      }
      c= calculaSerieGeometrica(numero);
      System.out.println(c);
      }
     /////////////////////////////////////// 5 ////////////////////////////////////////////////
     /**
-     * COMÉNTAME
+     * @param cadena 
      *
      */
     public static String calculaReversa(String cadena) {
@@ -138,7 +181,7 @@ System.out.println(calculaReversa(cad));
     }
     ////////////////////////////////////// 6 /////////////////////////////////////////////////////
       /**
-     * COMÉNTAME
+     * @param cadena 
      *
      */
     public static int calculaSumaCaracteres(String cadena) {
@@ -212,12 +255,12 @@ if(opc >0 && opc< 9 ){
 switch(opc){
 case 1: F1();break;
 case 2: F2();break; 
-case 3: F4();break;
-case 4:F4();break;
-case 5:F5();break;
-case 6:F6();break;
-case 7:System.out.println("Aun no esta disponible");break;
-case 8:System.out.println("Aun no esta disponible");break;
+case 3: F3();break;
+case 4: F4();break;
+case 5: F5();break;
+case 6: F6();break;
+case 7: System.out.println("Aun no esta disponible");break;
+case 8: System.out.println("Aun no esta disponible");break;
 default:System.out.println("Opcion incorrecta"); break;
 }
 }
