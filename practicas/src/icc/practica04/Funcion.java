@@ -25,7 +25,7 @@ public class Funcion {
          }
     
       ////Metodo 
-    public void F1(){
+    public void usaF1(){
          String cadena;
          int num;
          System.out.println("Hola ingresa una cadena ");
@@ -53,7 +53,7 @@ public class Funcion {
          return j;
          }
      // Metodo 
-     public void F2(){
+     public void usaF2(){
 
            Scanner teclado = new Scanner (System.in);
    
@@ -95,7 +95,7 @@ public class Funcion {
 
 }
 //// Metodo
-public void F3() {
+public void usaF3() {
         int veces;
 
         Scanner teclado = new Scanner(System.in);
@@ -138,7 +138,7 @@ public void F3() {
     }
 
     //Metodo
-        public void F4(){
+        public void usaF4(){
           Scanner teclado = new Scanner(System.in);
          int numero;
          int p;
@@ -172,7 +172,7 @@ public void F3() {
     return cad;
     }
     ///Metodo 
-    public void F5(){
+    public void usaF5(){
      Scanner teclado = new Scanner(System.in);
      String cad;
      System.out.println("Ingresa una cadena");
@@ -199,7 +199,7 @@ public void F3() {
     return es;
     }
     ///Metodo
-    public void F6(){
+    public void usaF6(){
         Scanner teclado = new Scanner (System.in);
         String cj;
         int j;
@@ -213,11 +213,29 @@ public void F3() {
      * COMÉNTAME
      *
      */
-    public static int calculaAckermann(int m, int n) {
+    public static long calculaAckermann(long m, long n) {
 	//aquí va tu implementación
+         if(m == 0){
+             return (n + 1);
+         }else if(m > 0 && n == 0){
+             return calculaAckermann(m - 1, 1);
+         }else{
+         return calculaAckermann(m - 1, calculaAckermann(m, n - 1));
+         }
+     }
+      ///Metodo 
+     public void usaF7(){
+         long a, b;
+         long ack;
+         Scanner teclado = new Scanner(System.in);
+         System.out.println("Hola ingresa dos numero para calcular la funcion de ackerman");
+         a = teclado.nextLong();
+         b= teclado.nextLong();
+         ack= calculaAckermann(a,b);
+         System.out.println("el resultado es "+ack);
+  
 
-	return 0;
-    }
+         }
     ///////////////////////////////////////// 8 /////////////////////////////////////////////////////
     /**
      * COMÉNTAME
@@ -251,32 +269,42 @@ public void F3() {
             System.out.println("6) Ejercicio 6");
             System.out.println("7) Ejercicio 7");
             System.out.println("8) Ejercicio 8") ;
+            System.out.println("9) Salir");
             opc = teclado.nextInt();
+            System.out.println();
+            if(opc >0 && opc <=9 ){
+                 System.out.println("Seleccionaste la opcion: "+opc);
+                 System.out.println();}
+            else{
+                 System.out.println("Oop's parace que no seleccionaste la opcion correcta ");}
             //validacion del dato de entrada
             if(opc >0 && opc< 9 ){
 
                 switch(opc){
                      
-                    case 1: F1();break;
+                    case 1: usaF1();break;
 
-                    case 2: F2();break;
+                    case 2: usaF2();break;
 
-                    case 3: F3();break;
+                    case 3: usaF3();break;
 
-                    case 4: F4();break;
+                    case 4: usaF4();break;
 
-                    case 5: F5();break;
+                    case 5: usaF5();break;
 
-                    case 6: F6();break;
+                    case 6: usaF6();break;
 
-                    case 7: System.out.println("Aun no esta disponible");break;
+                    case 7: usaF7();break;
 
                     case 8: System.out.println("Aun no esta disponible");break;
 
                     default:System.out.println("Opcion incorrecta"); break;
                 }
             }
-        }while(opc<7);
+        }while(opc<9);
+        System.out.println();
+        if(opc>9)
+         System.out.println("Hasta luego");
 
     }
 
