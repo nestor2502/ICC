@@ -1,0 +1,36 @@
+package icc.stdin;
+/**
+ *uso de entrada estandar
+ *@author Nestor
+ *@version 1.0
+ *@date 12/09/18
+ */
+
+public class Miprograma{
+    /**
+     *Metodo principal
+     *@param args argumentos del metodo
+     *
+     *
+     */
+    public static void main (String [] args){
+	Scanner sc = new Scanner(System.in);
+	int n=0;// contador
+        int a,b=2,c;
+	String s;
+	/**
+      	System.out.println("prueba 1");
+	n=sc.nextInt();
+	System.out.println("el valor leido es" + n );
+	System.out.println("Ingresa una cadena");
+	sc.nextLine();
+	System.out.println("La cadena es"+s);
+	sc.close();//cerra el escaner
+	*/
+
+	
+     }
+
+
+
+}

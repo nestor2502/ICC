@@ -1,0 +1,25 @@
+/**
+ *
+ *
+ *
+ *
+ */
+
+
+
+import java.util.Scanner;
+
+public class saludo {
+    public static void main(String [] args){
+	Scanner teclado= new Scanner (System.in); 
+	String a;
+	System.out.println("Hola ingresa tu nombre:");
+	a= teclado.nextLine();
+	System.out.println("Wow me encanta en nombre "+ a );
+
+
+    }
+
+
+
+}

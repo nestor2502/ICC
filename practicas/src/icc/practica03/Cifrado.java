@@ -19,7 +19,9 @@ System.out.println("Ingresa una cadena");
 cad= teclado.nextLine();
 System.out.println("Cuantos numeros deseas recorrerlo");
 n= teclado.nextInt();
-for(int i=0; i<=cad.length(); i++){
+
+
+for(int i=0; i< cad.length(); i++){
 	//Devuelve el carácter situado en la posición 'index' pasada por parámetro.
     int as = cad.charAt(i);
     // recorre n numeros de su posicion original
