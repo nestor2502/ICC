@@ -8,27 +8,7 @@ package icc.practica05;
 import java.util.Scanner;
 public class UsaDado{
 	/**
-	*"Colores disponibles: \t"
-	*"\n1) Blanco \t"
-	*"\n2) Rojo \t"
-    *"\n3) Azul \t"
-    *"\n4) Morado \t"
-    *"\n5) Marrón  \t"
-    *"\n6) Rosado \t"
-    *"\n7) Verde \t"
-    *"\n8) Negro \t"
-    *"\n9) Celeste \t"
-    *"\n10) Mostaza \t"
-    *"\n11) Amarillo \t"
-    *"\n12) Naranja \t"
-    *"\n13) Lila \t"
-    *"\n14) Plateado \t"
-    *"\n15) Verde limón \t"
-    *"\n16) Rojo intenso \t"
-    *"\n17) Melón \t"
-	*"\n18) Negro oscuro \t"  
-    *"\n19) Dorado \t"
-
+	
 System.out.println("Presiona Enter para continuar");
 	     enter = teclado.nextLine();
 		if(enter.equals("")){
@@ -82,7 +62,7 @@ System.out.println("Presiona Enter para continuar");
 	     System.out.println("");
 	     System.out.println("Presiona Enter para continuar");
 		  enter = teclado.nextLine();
-			if(enter.equals("")){
+		 if(enter.equals("")){
 			 limpiarPantalla();
 	     }}
 
@@ -117,16 +97,17 @@ System.out.println("Presiona Enter para continuar");
 	     color = teclado.nextInt();
 	     System.out.println();
 	     if(color <=19){
-	     System.out.println("El color seleccionado es "+ color);
-         System.out.println();
-         System.out.println("Ahora ingresa el numero de caras que tendrá tu dado");
-         System.out.println("El numero maximo de caras es 20");
-         caras= teclado.nextInt();
-         if (caras<=20){
-         dado2 = new Dado(caras, color);}
-         else{
-         System.out.println("Excediste el numero de caras permitido");	
-         }}
+		     System.out.println("El color seleccionado es "+ color);
+	         System.out.println();
+	         System.out.println("Ahora ingresa el numero de caras que tendrá tu dado");
+	         System.out.println("El numero maximo de caras es 20");
+	         caras= teclado.nextInt();
+	         if (caras<=20){
+		         dado2 = new Dado(caras, color);}
+	         else{
+	             System.out.println("Excediste el numero de caras permitido");	
+	         }
+          }
          System.out.println();
          System.out.println();
          dado2.muestraDado();	
