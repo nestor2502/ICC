@@ -59,6 +59,8 @@ public class Dado {
      */
     public void setNumCaras(int numCaras) {
 	       this.numCaras = numCaras;
+	       if(numCaras >20)
+	       System.out.println("El numero maximo permitido de caras es 20"); 
 
     }
 
@@ -116,6 +118,7 @@ public class Dado {
 
 	int a = 1 + numDado.nextInt(6);
 
+	this.ultiLan= a;
 	return a;
 	
     }
