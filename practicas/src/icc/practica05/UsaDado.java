@@ -33,7 +33,7 @@ System.out.println("Presiona Enter para continuar");
 		 System.out.println();
 		 System.out.println();
 		 System.out.println();
-		 System.out.println("1) Dado por defecto");
+		 System.out.println("1) Dado por defecto (6 caras)");
 		 System.out.println("2) Dado personalizado");
 		 System.out.println("3) Dado 'Especial' ");
 		 System.out.print("4) Salir");
@@ -55,37 +55,59 @@ System.out.println("Presiona Enter para continuar");
 		Dado dado1 = new Dado();
         Scanner teclado = new Scanner (System.in);
      public void mosDado1(){
-		 String enter; 
+     	System.out.println("Dado comun de 6 caras");
+     	System.out.println();
+     	System.out.println();
+		 int enter; 
 		 int numveces, opc;
 		 dado1.lanzaDado();
 	     dado1.muestraDado();
 	     System.out.println();
 	     do{
+	     	int cont=0;
+	     	cont++;
+	     	
 	     	 System.out.println();
-             System.out.println("Selecciona lo que deseas realizar: 1) Volver a lanzar    2)  Lanzar n veces");
+	     	 System.out.println();
+             System.out.println("Selecciona lo que deseas realizar: 1) Volver a lanzar    2)  Lanzar n veces   3) Regresar al menu" );
+             
              opc = teclado.nextInt();
+             limpiarPantalla();
 	         if (opc == 1){
 	         	 dado1.lanzaDado();
+	     	if(cont>=1){
+	     		System.out.println("Dado comun de 6 caras");
+	     		System.out.println();
+	     		System.out.println();}
 		         dado1.muestraDado();
+
 		         System.out.println();
 		         System.out.println();
-		         System.out.println("Presiona Enter para continuar");
-			     enter = teclado.nextLine();
-				 if(enter.equals("a"))	
-				     limpiarPantalla();
+		         System.out.println("Presiona 1 para continuar");
+			     enter = teclado.nextInt();
+				 if(enter==1){	
+				     limpiarPantalla();}
 
 	         }
-	         if (opc == 2 );{
-			     System.out.println("Ingresa el numero de veces que deseas lanzar el dado");
-			     numveces= teclado.nextInt();
-			     System.out.println();
-			     System.out.println("Los resultados son: ");
-			     System.out.println();
-				 int [] nv = dado1.lanzaNVeces(numveces);
-				 for(int i =0; i<nv.length; i++){
-				     nv[i]= dado1.lanzaDado();
-				     System.out.println("valor "+ (i+1) +" es igual a: " + nv[i]); 	
-				 }
+	         if (opc == 2 ){
+			         if(cont>=1){
+			     		System.out.println("Dado comun de 6 caras");
+			     		System.out.println();
+			     		System.out.println();}
+				     System.out.println("Ingresa el numero de veces que deseas lanzar el dado");
+				     numveces= teclado.nextInt();
+				     System.out.println();
+				     System.out.println("Los resultados son: ");
+				     System.out.println();
+					 int [] nv = dado1.lanzaNVeces(numveces);
+					 for(int i =0; i<nv.length; i++){
+					     nv[i]= dado1.lanzaDado();
+					     System.out.println();
+					     System.out.println();
+					     System.out.println("dado: "+ (i+1));
+					     //System.out.println("valor "+ (i+1) +" es igual a: " + nv[i]); 	
+					 dado1.muestraDado();
+					 }
 			  }
 	     }while(opc <=2);
 	     
@@ -94,9 +116,10 @@ System.out.println("Presiona Enter para continuar");
 	     public void mosDado2(){
 	     	String enter;
 	     	int opc, opc2, color2, caras2, nopc;
-	    Dado dado2 = new Dado();
+	    
 	     	int color;
 	     	int caras;
+	     	Dado dado2 = new Dado();
          System.out.println("En este espacio podras personalizar tu dado");
          System.out.println("cambiando el color, y numero de caras");
 	     System.out.println();
@@ -128,17 +151,23 @@ System.out.println("Presiona Enter para continuar");
 	         System.out.println("Ahora ingresa el numero de caras que tendrá tu dado");
 	         System.out.println("El numero maximo de caras es 20");
 	         caras= teclado.nextInt();
+	          limpiarPantalla();
 	         if (caras<20){
-		         dado2 = new Dado(caras, color);}
+             dado2= new Dado(caras, color);
+	         dado2.lanzaDado();
+	         dado2.muestraDado();
+		     }
 	         else{
 	             System.out.println("Excediste el numero de caras permitido");	
 	         }
           }
+          if (color > 19){
+          	System.out.println("El valor introducido es mayor a 19");}
+         System.out.println();		
          System.out.println();
-         System.out.println();
-         dado2.muestraDado();	
+         	
          do{
-         System.out.println("¿Lo quieres volver a modificar? 1) si , 2) no ");
+         System.out.println("¿Lo quieres volver a modificar o lanzar? 1) si , 2) no ");
 		  opc= teclado.nextInt();
 		  limpiarPantalla();
 			if(opc ==1  ){
@@ -146,6 +175,7 @@ System.out.println("Presiona Enter para continuar");
 				     System.out.println();
 				     System.out.println("1) color ");
 				     System.out.println("2) numero de caras ");
+				     System.out.println("3) Volver a lanzar");
 				     opc2= teclado.nextInt();
 			     if (opc2==1){
 			     	 System.out.println("Los colores disponibles son : "
@@ -181,7 +211,11 @@ System.out.println("Presiona Enter para continuar");
 	             
 					 
 			         }
-	              
+	              if(opc2>2){
+	              	dado2.lanzaDado();
+	                dado2.muestraDado();
+
+	              }
 				 limpiarPantalla();
 	     }
 	     else{
