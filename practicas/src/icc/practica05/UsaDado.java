@@ -6,6 +6,7 @@ package icc.practica05;
 *@version 20/10/2018
 */
 import java.util.Scanner;
+import java.util.Arrays;
 public class UsaDado{
 	/**
 	
@@ -57,9 +58,18 @@ System.out.println("Presiona Enter para continuar");
         Scanner teclado = new Scanner (System.in);
      public void mosDado1(){
 		 String enter; 
+		 int numveces;
 		 dado1.lanzaDado();
 	     dado1.muestraDado();
 	     System.out.println("");
+	     System.out.println("Ingresa el numero de veces que deseas lanzar el dado");
+	     numveces= teclado.nextInt();
+		 int [] nv = dado1.lanzaNVeces(numveces);
+		 for(int i =0; i<=nv.length; i++){
+		     nv[i]= dado1.lanzaDado();
+		     System.out.println("" + nv[i]); 	
+		 }
+	     //System.out.println(Arrays.toString(nv));
 	     System.out.println("Presiona Enter para continuar");
 		  enter = teclado.nextLine();
 		 if(enter.equals("")){
@@ -68,6 +78,7 @@ System.out.println("Presiona Enter para continuar");
 
 	     public void mosDado2(){
 	     	String enter;
+	     	int opc, opc2, color2, caras2;
 	    Dado dado2 = new Dado();
 	     	int color;
 	     	int caras;
@@ -111,10 +122,52 @@ System.out.println("Presiona Enter para continuar");
          System.out.println();
          System.out.println();
          dado2.muestraDado();	
-         System.out.println("Presiona Enter para continuar");
-		  enter = teclado.nextLine();
-			if(enter.equals("")){
+         System.out.println("¿Lo quieres volver a modificar? 1) si , 2) no ");
+		  opc= teclado.nextInt();
+		  limpiarPantalla();
+			if(opc ==1  ){
+		     System.out.println("Que quieres modificar");
+		     System.out.println();
+		     System.out.println("1) color ");
+		     System.out.println("2) numero de caras ");
+		     opc2= teclado.nextInt();
+		     if (opc==1){
+		     	System.out.println("Los colores disponibles son : "
+			     +"\n1) Blanco "
+			     +"\n2) Rojo "
+		         +"\n3) Azul "
+		         +"\n4) Morado "
+		         +"\n5) Marrón  "
+		         +"\n6) Rosado "
+		         +"\n7) Verde "
+		         +"\n8) Negro "
+		         +"\n9) Celeste "
+		         +"\n10) Mostaza "
+		         +"\n11) Amarillo "
+		         +"\n12) Naranja "
+		         +"\n13) Lila "
+		         +"\n14) Plateado "
+		         +"\n15) Verde limón "
+		         +"\n16) Rojo intenso "
+		         +"\n17) Melón "
+			     +"\n18) Negro oscuro "  
+		         +"\n19) Dorado ");
+		     System.out.println();
+		     System.out.println("Ingresa el numero del nuevo color ");	
+		     color2= teclado.nextInt();
+		     dado2.setColor(color2);
+		     }
+		     if(opc ==2 ){
+		     	System.out.println("Ingresa el nuevo numero de caras para tu dado");
+		     caras2= teclado.nextInt();
+		     dado2.setNumCaras(caras2);
+
+		     }
+              
 			 limpiarPantalla();
+	     }
+	     else{
+	     limpiarPantalla();	
 	     }
          }
 	     

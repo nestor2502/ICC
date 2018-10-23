@@ -140,8 +140,11 @@ public class Dado {
      *
      */
     public int[] lanzaNVeces(int lanzamientos) {
-	//aquí va tu implementación
-	return null;
+    	int[] valores = new int[lanzamientos];
+    	for (int i =0 ; i<lanzamientos; i++){
+    		valores[i]=lanzaDado();
+    	}
+		return valores;
     }
 
     /**
