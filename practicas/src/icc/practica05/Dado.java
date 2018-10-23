@@ -93,10 +93,10 @@ public class Dado {
      *
      */
     public void setColor(int color ) {
-    if (color<=19)
+    
     this.color = color;
-    else 
-    System.out.println("Esa cantidad no esta permitida");
+    
+    
     }
     
     /**
