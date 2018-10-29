@@ -127,7 +127,7 @@ public class Dado {
      *
      *
      */
-    private int lanzaDadoTruqueado() {
+    private int lanza	DadoTruqueado() {
 	/*
 	  Implementación Extra
 	  Sólo si se creó el constructor para un dado No balanceado

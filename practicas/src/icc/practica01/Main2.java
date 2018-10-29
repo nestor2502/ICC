@@ -1,6 +1,6 @@
 /**
- *
- *
+ *@author Nestor Vazquez
+ *@version 10/09/18
  *
  */
 import java.util.Scanner;

@@ -4,6 +4,7 @@ package icc.practica03;
 *
 *@author(Nestor vazquez)
 */
+import java.util.Scanner;
 public class Palindromo{
 
 	public static void main(String[] args) {
@@ -11,38 +12,39 @@ public class Palindromo{
 		Scanner teclado = new Scanner(System.in);
 
 		int longitudCadena ;
-    	String = cadena, cadenaComparada = "";
+    	String  cadena, cadenaComparada = "";
     	boolean palindromo = true;
-
+        
     	System.out.print("Ingresa la cadena: ");
     	cadena = teclado.nextLine();
 
     	longitudCadena = cadena.length();
 
     	for(int i = 0; i <= (longitudCadena - 1); i++){
-
+            //Se crea la nueva palabra  
     		cadenaComparada = cadena.charAt(i) + cadenaComparada;
     	
     	}
 
-    	for(int i = 0; i <= (longitudCadena)-1: i++){
+    	for(int i = 0; i <= (longitudCadena)-1; i++){
 
-    		if(cadenaComparada.charAt(i) != cadena.CharAt}(i)){
+    		if(cadenaComparada.charAt(i) != cadena.CharAt(i)) {
 
     			palindromo = false;
     		}
-    	}
+    	
 
     	if(palindromo = true){
 
-    		System.out.println("\nPalindromo")
-    	}else{
+    		System.out.println("\nPalindromo");
+    	}
+        else{
 
-    		System.out.println("\nNo Palindromo")
+    		System.out.println("\nNo Palindromo");
     	}
 
 
 }
-}
+}}
     
     

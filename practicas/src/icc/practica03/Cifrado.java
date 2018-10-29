@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import java.util.Scanner;
 public class Cifrado{
 public static void main (String [] args ){
+
 Scanner teclado = new Scanner(System.in);
 
 String cad;
