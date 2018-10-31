@@ -116,7 +116,7 @@ public class Dado {
     public int lanzaDado() {
 	Random numDado = new Random();
 
-	int a = 1 + numDado.nextInt(6);
+	int a = 1 + numDado.nextInt(this.numCaras);
 
 	this.ultiLan= a;
 	return a;
@@ -127,7 +127,7 @@ public class Dado {
      *
      *
      */
-    private int lanza	DadoTruqueado() {
+    private int lanzaDadoTruqueado() {
 	/*
 	  Implementación Extra
 	  Sólo si se creó el constructor para un dado No balanceado
@@ -162,12 +162,36 @@ public class Dado {
      */
     public void muestraDado() {
 	//aquí va tu implementación
-    	System.out.println("numero de caras "+ numCaras);
-    	System.out.println("balanceado " + balanceado);
-    	System.out.println("color"+ color);
-	    System.out.println("ultimo lanzamiento "+ ultiLan);
-
-
+        if(numCaras>6 ){
+        System.out.println("El dado tiene  "+ numCaras+ " caras");
+    	System.out.println("color "+ color);
+	    System.out.println("Valor: ");
+        System.out.println();
+        System.out.println();
+        System.out.println("          oo");
+        System.out.println("       o     o");
+        System.out.println("      o        o");
+        System.out.println("      o         o");
+        System.out.println("      o    "+this.ultiLan+"     o");
+        System.out.println("       o        o");
+        System.out.println("        o      o");
+        System.out.println("         o    o");
+        System.out.println("           oo");}
+        if(numCaras<=6 ){
+        System.out.println("color "+ color);
+        System.out.println("Valor: ");
+        System.out.println();
+        System.out.println();
+        System.out.println("   * * * * * * * * *");
+        System.out.println("   *               *");
+        System.out.println("   *               *");
+        System.out.println("   *               *");
+        System.out.println("   *       "+this.ultiLan+"       *");
+        System.out.println("   *               *");
+        System.out.println("   *               *");
+        System.out.println("   *               *");
+        System.out.println("   * * * * * * * * *");
     }
+    }    
 
 }
