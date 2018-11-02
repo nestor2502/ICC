@@ -11,60 +11,80 @@ import java.util.StringTokenizer;
 
 public class Funcion {
     Scanner teclado = new Scanner(System.in);
-     ///////////////////////////////// 1 /////////////////////////////////////////////
+    
      /**
-     * 
+     * Imprime N veces la cadena ingresada
      * @param cadena
      * @param numero
      */
     public static void  imprimeNVeces(String cadena, int n) {
-	     //aquí va tu implementación
+	     
          for(int i=0; i<=n;i++){
-             System.out.println("" + cadena);}
-    
+
+             System.out.println("" + cadena);
          }
     
-      ////Metodo 
-    public void usaF1(){
+     }
+    
+    /** 
+    *Metodo para usar funcion imprimeNVeces 
+    */
+    public void usa_imprimeNVeces(){
+
          String cadena;
          int num;
+
          System.out.println("Hola ingresa una cadena ");
          cadena= teclado.nextLine();
+
          System.out.println("¿cuantas veces quieres imprimir la cadena?");
          num= teclado.nextInt();
+
          System.out.println();
          imprimeNVeces(cadena, num);
 
-         }
-    //////////////////////////////////// 2 /////////////////////////////////////////////
+     }
+    
     /**
-     * 
+     * Ingresa un caracter y devuelve el numero
+       de veces que aparcece en la cadena 
      * @param cadena
      * @param c
      */
     public static int buscaCaracter(String cadena, char c) {
-         //aquí va tu implementación
+         
          int j=0;
+
          for (int i=0; i<cadena.length();i++){
              int as= cadena.charAt(i);
+
              if(as==c)
                  j++;
+
             }
          return j;
          }
-     // Metodo 
-     public void usaF2(){
+
+
+     /** 
+     *Metodo para usar funcion buscaCaracter 
+     */
+     public void usa_buscaCaracter(){
 
            Scanner teclado = new Scanner (System.in);
    
            String cad;
            char num;
            int can;
+
            System.out.println("Hola ingresa una cadena");
            cad= teclado.nextLine();
+
            System.out.println("ingresa la letra que deseas contar dentro de la cadena");
            num = teclado.next().charAt(0);
+
            can= buscaCaracter(cad, num);
+
            System.out.println();
            System.out.println("la letra " + num+ " aparece " +can+" veces");
          }
@@ -76,7 +96,9 @@ public class Funcion {
      */
      public static int buscaPalabra(String oracion, String palabra){
      Scanner teclado = new Scanner(System.in);
-
+     /** La clase StringTokenizer nos ayuda a dividir un string en substrings basado en un delimitador
+         en este caso el delimitador es es un espacion en blanco
+     */
      StringTokenizer tok = new StringTokenizer(oracion);
 
      int contador=0;
@@ -93,150 +115,205 @@ public class Funcion {
      return contador; 
 
 
-}
-//// Metodo
-public void usaF3() {
-        int veces;
+     }
+    /** 
+     *Metodo para usar funcion buscaPalabra
+     */
+    public void usa_buscaPalabra() {
+            int veces;
 
-        Scanner teclado = new Scanner(System.in);
-        System.out.println("Introduce una frase: ");
-        String frase = teclado.nextLine().toLowerCase();
+            Scanner teclado = new Scanner(System.in);
+            System.out.println("Introduce una frase: ");
+            String frase = teclado.nextLine().toLowerCase();
 
-        StringTokenizer tok = new StringTokenizer(frase);
-
-
-        String palabraBuscar;
+            StringTokenizer tok = new StringTokenizer(frase);
 
 
-        int contador = 0;
+            String palabraBuscar;
 
- 
 
-        System.out.print("Introduce la palabra a contar: ");
+            int contador = 0;
 
-        palabraBuscar = teclado.nextLine().toLowerCase();
+     
 
-        veces= buscaPalabra(frase, palabraBuscar);
-        System.out.println("La frase '" + frase + "'\ncontine " + veces + " veces la palabra '" + palabraBuscar + "'");
-    }
-	//////////////////////////////////// 4 ////////////////////////////////////////////////// 
+            System.out.print("Introduce la palabra a contar: ");
+
+            palabraBuscar = teclado.nextLine().toLowerCase();
+
+            veces= buscaPalabra(frase, palabraBuscar);
+            System.out.println();
+            System.out.println("La frase '" + frase + "'\ncontine " + veces + " veces la palabra '" + palabraBuscar + "'");
+     }
+	 
     /**
+    * Recibe un entero n e imprime los primeros n terminos de la
+      serie geometrica, ademas devuelve el valor de la suma.
      * @param numero
      *
      */
     public static double calculaSerieGeometrica(int numero) {
-	//aquí va tu implementación
+	
         double s,j, a, b, c, d;
         j= numero +1; 
-       //s= ((1*(1-Math.pow(1/2,numero)))/1-(1/2))-1;
-       s= ((1-(Math.pow((0.5),j)))/(1-(0.5)))-1;
-      a= Math.pow((0.5),j);
-      b= 1-a;
-      c=b/(0.5);
-      d= c-1;
-	 return s;
-    }
 
-    //Metodo
-        public void usaF4(){
-          Scanner teclado = new Scanner(System.in);
+       /**Formula para calcular serie geometrica*/
+       s= ((1-(Math.pow((0.5),j)))/(1-(0.5)))-1;
+       a= Math.pow((0.5),j);
+       b= 1-a;
+       c=b/(0.5);
+       d= c-1;
+
+	 return s;
+     }
+
+    /** 
+     *Metodo para usar funcion buscaPalabra
+     */
+    public void usa_calculaSerieGeometrica(){
+
+         Scanner teclado = new Scanner(System.in);
+
          int numero;
          int p;
          double c, d, e;
+
          System.out.println("Cuantos terminos de la serie geometrica deseas calcular: ");
          numero = teclado.nextInt();
+
          p = (int)Math.pow(2,numero);
+
          for(int i=1; i <= numero ;i++){
+
              d=  (int)Math.pow(2,i);
              e= (int)d;
+             //SE imprime suma 
              if (i<numero){
                  System.out.print("1/"+ d+" + ");}
+
              if(i==numero){
                  System.out.println("1/"+d);
                 }
             }
           c= calculaSerieGeometrica(numero);
-         System.out.println(c);
+         System.out.println("El total de la suma es: "+c);
          }
-    /////////////////////////////////////// 5 ////////////////////////////////////////////////
+    
+
     /**
+     * Recibe una cadena y devuelve su reversa 
      * @param cadena 
      *
      */
     public static String calculaReversa(String cadena) {
-    //aquí va tu implementación
+    
         String cad ="";
+
         for (int i= cadena.length();i>0;i--){
+
           cad=  cad+cadena.substring((i-1),i);
+
          }
-    return cad;
-    }
-    ///Metodo 
-    public void usaF5(){
+
+     return cad;
+     }
+
+    /** 
+     *Metodo para usar funcion calculaReversa
+     */
+    public void usa_calculaReversa(){
+
      Scanner teclado = new Scanner(System.in);
+
      String cad;
+
      System.out.println("Ingresa una cadena");
      cad = teclado.nextLine();
+
      System.out.println(calculaReversa(cad));
 
 
     }
     ////////////////////////////////////// 6 /////////////////////////////////////////////////////
-      /**
+    /**
+     * Recibe una cadena y devuelve el resultado de sumar el valor numerico
+       de cada caracter que compone la cadena.
      * @param cadena 
      *
      */
     public static int calculaSumaCaracteres(String cadena) {
-    //aquí va tu implementación
         
-    int es = 0, ro=0 ;
-    char c=0;
-    for (int i=0; i< cadena.length(); i++){
-       int as = cadena.charAt(i);
-        es= es+as;
-        
-    } 
-    return es;
+        int es = 0, ro=0 ;
+        char c=0;
+
+        for (int i=0; i< cadena.length(); i++){
+
+           int as = cadena.charAt(i);
+            es= es+as;
+            
+         } 
+
+        return es;
     }
-    ///Metodo
-    public void usaF6(){
+    
+    /** 
+     *Metodo para usar funcion calculaSumaCaracteres
+     */
+    public void usa_calculaSumaCaracteres(){
+
         Scanner teclado = new Scanner (System.in);
         String cj;
         int j;
+
         System.out.println("ingresa una cadena");
         cj = teclado.nextLine();
+
         j= calculaSumaCaracteres(cj);
+
         System.out.println("El resultado de la suma es:" + j);}
 
     //////////////////////////////////////// 7 /////////////////////////////////////////////////////
     /**
-     * COMÉNTAME
+     * Recibe dos numeros naturales (m,n) y devuelve un entero resultado de
+     * evaluar m y n en la funcion de Ackerman de manera recursiva
+     * @param m
+     * @param n
      *
      */
     public static long calculaAckermann(long m, long n) {
-	//aquí va tu implementación
+	
          if(m == 0){
              return (n + 1);
-         }else if(m > 0 && n == 0){
+
+         }
+         if(m > 0 && n == 0){
              return calculaAckermann(m - 1, 1);
-         }else{
-         return calculaAckermann(m - 1, calculaAckermann(m, n - 1));
+         }
+         else{
+             return calculaAckermann(m - 1, calculaAckermann(m, n - 1));
          }
      }
-      ///Metodo 
-     public void usaF7(){
+
+
+    /** 
+     *Metodo para usar funcion calculaAckermann
+     */
+     public void usa_calculaAckermann(){
          long a, b;
          long ack;
+
          Scanner teclado = new Scanner(System.in);
+
          System.out.println("Hola ingresa dos numero para calcular la funcion de ackerman");
          a = teclado.nextLong();
          b= teclado.nextLong();
+
          ack= calculaAckermann(a,b);
+
          System.out.println("el resultado es "+ack);
   
 
          }
-    ///////////////////////////////////////// 8 /////////////////////////////////////////////////////
+    
     /**
      * COMÉNTAME
      *
@@ -282,19 +359,19 @@ public void usaF3() {
 
                 switch(opc){
                      
-                    case 1: usaF1();break;
+                    case 1: usa_imprimeNVeces();break;
 
-                    case 2: usaF2();break;
+                    case 2: usa_buscaCaracter();break;
 
-                    case 3: usaF3();break;
+                    case 3: usa_buscaPalabra();break;
 
-                    case 4: usaF4();break;
+                    case 4: usa_calculaSerieGeometrica();break;
 
-                    case 5: usaF5();break;
+                    case 5: usa_calculaReversa();break;
 
-                    case 6: usaF6();break;
+                    case 6: usa_calculaSumaCaracteres();break;
 
-                    case 7: usaF7();break;
+                    case 7: usa_calculaAckermann();break;
 
                     case 8: System.out.println("Aun no esta disponible");break;
 

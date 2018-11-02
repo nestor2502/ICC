@@ -33,7 +33,7 @@ public class Palindromo{
     			palindromo = false;
     		}
     	
-
+        }
     	if(palindromo = true){
 
     		System.out.println("\nPalindromo");
@@ -44,7 +44,7 @@ public class Palindromo{
     	}
 
 
-}
+
 }}
     
     

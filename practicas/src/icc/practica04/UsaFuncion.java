@@ -9,11 +9,11 @@ package icc.practica04;
 import java.util.Scanner;
 public class UsaFuncion{
 
-public static void main (String [] args){
-	// SE llama al objeto Funcion y Scanner
-Funcion gh = new Funcion();
-Scanner teclado= new Scanner (System.in);
-//Se declaran variables 
-gh.usaMenu();
-}
+	public static void main (String [] args){
+		// SE llama al objeto Funcion y Scanner
+	Funcion gh = new Funcion();
+	Scanner teclado= new Scanner (System.in);
+	 //Se llama al metodo Menu
+	 gh.usaMenu();
+	}
 }
