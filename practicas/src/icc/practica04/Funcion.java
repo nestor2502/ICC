@@ -88,8 +88,9 @@ public class Funcion {
            System.out.println();
            System.out.println("la letra " + num+ " aparece " +can+" veces");
          }
-    ////////////////////////////////// 3 //////////////////////////////////////////////// 
-    /**
+
+         
+       /**
      * Nos dice el número de veces que aparece una palabra en una oración
      * @param oracion
      * @param palabra
@@ -233,7 +234,7 @@ public class Funcion {
 
 
     }
-    ////////////////////////////////////// 6 /////////////////////////////////////////////////////
+   
     /**
      * Recibe una cadena y devuelve el resultado de sumar el valor numerico
        de cada caracter que compone la cadena.
@@ -271,7 +272,6 @@ public class Funcion {
 
         System.out.println("El resultado de la suma es:" + j);}
 
-    //////////////////////////////////////// 7 /////////////////////////////////////////////////////
     /**
      * Recibe dos numeros naturales (m,n) y devuelve un entero resultado de
      * evaluar m y n en la funcion de Ackerman de manera recursiva
