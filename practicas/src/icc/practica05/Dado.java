@@ -110,8 +110,8 @@ public class Dado {
 
     
     /**
-     * COMÉNTAME...
-     * @return 
+     * Lnza el dado y obtiene un numero aleatorio
+     * @return a
      */
     public int lanzaDado() {
 	Random numDado = new Random();
@@ -136,7 +136,7 @@ public class Dado {
     }
     
     /**
-     * COMÉNTAME...
+     * Lanza n veces el dado guarda los valores
      *
      */
     public int[] lanzaNVeces(int lanzamientos) {
@@ -157,10 +157,11 @@ public class Dado {
     }
 
     /**
-     * COMÉNTAME...
+     * Muestra un dado en 2D con en numero obtenido en el lanzamiento
      *
      */
     public void muestraDado() {
+        
 	//aquí va tu implementación
         if(numCaras>6 ){
         System.out.println("El dado tiene  "+ numCaras+ " caras");
