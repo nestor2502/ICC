@@ -19,6 +19,9 @@ else{
 }
 }
 
+public String(int a)
+i
+
 public static void main(String[] args){
 Scanner teclado = new Scanner(System.in);
 int n, r;
