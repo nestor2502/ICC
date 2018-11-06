@@ -8,7 +8,7 @@ import java.util.Random;
 public class JuegoPPT{
 // Variables de la clase
 private String jugador; 	
-private int eleccionMaquina;
+private char eleccionMaquina;
 private char eleccionHumano;
 private Scanner sc;
 
@@ -65,7 +65,7 @@ private Scanner sc;
      char eleccionHumano= ' ';
 	System.out.println("Te toca escoger");
     System.out.println("");
-    System.out.println("'l' para papel");
+    System.out.println("'p' para papel");
     System.out.println("'t' para tijera ");
     System.out.println("'r''para piedra ");
      //leyendo letra del teclado
@@ -73,6 +73,7 @@ private Scanner sc;
     //convirtiendo a entero
     for(int i =0 ; i< eleccion.length(); i++){
     int as= eleccion.charAt(i);
+    // conviertiendo a char
     eleccionHumano=(char)(as); }
 
     this.eleccionHumano = eleccionHumano;
@@ -89,23 +90,29 @@ private Scanner sc;
      */
     public void determinarGanador() {
 
-	informar(eleccionHumano,eleccionMaquina,);
+     if ((eleccionHumano == 'p') && (eleccionMaquina == 'r') )
+         System.out.println("Ganaste la maquina seleccionó:"+ this.eleccionMaquina);
+
+    if ((eleccionHumano == 'p') && (eleccionMaquina == 't') )
+         System.out.println("Perdiste la maquina seleccionó:"+ this.eleccionMaquina);
+
+     if ((eleccionHumano == 'r') && (eleccionMaquina == 't') )
+         System.out.println("Ganaste la maquina seleccionó:"+ this.eleccionMaquina);
+
+    if ((eleccionHumano == 'r') && (eleccionMaquina == 'p') )
+        System.out.println("Perdiste la maquina seleccionó:"+ this.eleccionMaquina);
+
+     if ((eleccionHumano == 't') && (eleccionMaquina == 'p') )
+         System.out.println("Ganaste la maquina seleccionó:"+ this.eleccionMaquina);
+
+    if ((eleccionHumano == 't') && (eleccionMaquina == 'r') )
+         System.out.println("Perdiste la maquina seleccionó:"+ this.eleccionMaquina);
+
     }
 
-    /**
-     * COMÉNTAME...
-     *DEfine quien le gana a quien 
-     
-     */
+    
     private void informar(char yo, char yoGano, char tuGanas) {
-        /**
-        ('p','r','t')
-        ('r','p','t')
-        ('t','p','r')
-        */
-    if(char yo == 'p'){
-
-    }
+       
 	//aquí va tu implementación
     }
 }
