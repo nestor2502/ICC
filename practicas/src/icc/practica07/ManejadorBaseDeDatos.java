@@ -11,17 +11,21 @@ public class ManejadorBaseDeDatos {
     /** Representa una tabla en la base de datos */
     private String[][] bdd;
     /** Identificador de cada columna de la tabla */
-    private final String[] ID_COLUMNA;
+    private final String[] ID_COLUMNA = new String [3];
+    String ID_COLUMNA[] ={"Nombre    ", "Edad ", "  #Cuenta"} 
     /** Resultado de la última búsqueda */
     private String ultimaBusqueda;
 
     /**
-     * COMÉNTAME...
+     * Metodo que inicia la base de datos
      *
      * @param idColumna
      * @param numRenglones
      */
     public ManejadorBaseDeDatos(String[] idColumna, int numRenglones) {
+
+
+
     
 
     
