@@ -63,7 +63,7 @@ public void getNombre(){
 *@param ovulo
 *
 */
-  public String set_idOvulo(String  ovulo){
+  public void set_idOvulo(String  ovulo){
 	
     this.idOvulo ="";
 
@@ -74,7 +74,7 @@ public void getNombre(){
 	     this.idOvulo  += idOvulo2 [i]; 
     }
 
-   return this.idOvulo;
+  
  }
 
 
@@ -85,8 +85,107 @@ public void getNombre(){
  */ 
  public void getidOvulo(){
 
- 	System.out.println("La identificacioon del ovulo es: "+ this.idOvulo);
+ 	System.out.println("El codigo de identificacion del ovulo es: "+ this.idOvulo);
  }
+
+/**
+*Metodo que asigna la ocupacion dependiendo de la casta
+*@param cast
+*
+*/
+
+ public void  setOcupacion( String cast ){
+ 	this.ocupacion = "";
+ 
+    String ocupacion;
+    int ocupa;
+    //se genera un numero random
+
+ 	ocupa = (int) (Math.random() * 3) + 1; 
+
+ 	if(alfa.equals(cast)){ 
+
+ 	     if (ocupa == 1 ){
+    
+             ocupacion = " Cientifico ";
+              }
+
+          if (ocupa == 2 ){
+    
+             ocupacion = " Encargado de fabrica ";
+              }
+
+          if (ocupa == 3 ){
+    
+             ocupacion = " Doctor ";
+              }
+     }
+    
+    if(gamma.equals(cast)){ 
+
+ 	     if (ocupa == 1 ){
+    
+             ocupacion = " Piloto ";
+              }
+
+          if (ocupa == 2 ){
+    
+             ocupacion = " Mecanico ";
+              }
+
+          if (ocupa == 3 ){
+    
+             ocupacion = " Enfermera ";
+              }
+     }
+
+     if(epsilon.equals(cast)){ 
+
+ 	     if (ocupa == 1 ){
+    
+             ocupacion = " Minero ";
+              }
+
+          if (ocupa == 2 ){
+    
+             ocupacion = " Herrero ";
+              }
+
+          if (ocupa == 3 ){
+    
+             ocupacion = " Pescador ";
+              }
+     }
+
+     this.ocupacion = ocupacion;
+ }
+
+ /**
+ *Metodo que obtiene la ocupacion 
+ *
+ */
+ public void getOcupacion(){
+
+   System.out.println(" La ocupacion es: " + this.ocupacion);
+  
+ }
+
+ public void setCasta(){
+
+ 	this.ocupacion = "";
+ }
+
+public void getCasta(){
+
+  System.out.println("Casta: "+this.casta);
+
+}
+
+public void Condicionar(){
+
+
+}
+
 
  
 
