@@ -1,6 +1,7 @@
-package icc.munndofeliz;
+package icc.mundofeliz;
 
 import java.util.Scanner;
+//simport icc.mundofeliz.Humano;
 /**
 *
 *Subclase que hereda propiedades de Humano.java
@@ -9,7 +10,7 @@ import java.util.Scanner;
 
 public class Alfa extends Humano {
 	Scanner teclado = new Scanner (System.in);
-	Humano jeje = new Humano();
+   //	Humano jeje = new Humano();
 
 
 /**
@@ -20,20 +21,23 @@ public class Alfa extends Humano {
 		
 
 	}
-
+/**
 
 public void getFichaTecnica(){
-jeje.setNombre();
+setNombre();
 String ovulo;
 System.out.println("Ingresa las primeras 3 letras con las que quieres identificar el ovulo");
 ovulo = teclado.next();
-	jeje.set_idOvulo(ovulo);
-	jeje.setOcupacion(alfa );
-System.out.pritln("Nombre " + jeje.getNombre());
-System.out.println("idOvulo "+ jeje.getidOvulo());
-System.out.println("Ocupacion "+ jeje.getOcupacion());
+	set_idOvulo(ovulo);
+	setOcupacion("alfa ");
+System.out.println();
+ getNombre();
+System.out.println("idOvulo ");
+getidOvulo();
+System.out.println("Ocupacion ");
+ getOcupacion();
 
 }
-
+*/
 
 }
