@@ -9,8 +9,9 @@ import java.util.Random;
 *@version 15/11/18
 *
 */
-public class Humano {
+public abstract class Humano {
 
+	 Random rand = new Random();
 protected String nombre;
 protected String idOvulo;
 protected String ocupacion;
@@ -34,12 +35,29 @@ public Humano(){
 
 /**
 *
+*Constructor para iniciar las variables
+*
+*/
+public Humano(String nombre, String idOvulo, String ocupacion, String casta){
+
+nombre = nombre;
+ this.idOvulo  = idOvulo;
+ this.ocupacion = ocupacion;
+ this.casta = casta;
+ 
+
+}
+
+
+
+/**
+*
 *Metrodo que quenera un nombre aleatorio 
 */
 
 public void setNombre(){
 	
-    this.nombre = nombre;
+    //this.nombre = nombre;
 	
     
         this.nombre= generaRandom( 6 );
@@ -51,6 +69,8 @@ public void setNombre(){
 *
 */
 public void getNombre(){
+	String nombre;
+	
 
   System.out.println("Nombre: "+ this.nombre);	
 
@@ -97,11 +117,14 @@ public void getNombre(){
  public void  setOcupacion( String cast ){
  	this.ocupacion = "";
  
-    String ocupacion;
+    String ocupacion = "";
     int ocupa;
     //se genera un numero random
+    
+String alfa ="alfa", gamma = "gamma", epsilon = "epsilon";
 
  	ocupa = (int) (Math.random() * 3) + 1; 
+
 
  	if(alfa.equals(cast)){ 
 
@@ -185,6 +208,21 @@ public void Condicionar(){
 
 
 }
+public void getFichaTecnica(){
+setNombre();
+String ovulo;
+System.out.println("Ingresa las primeras 3 letras con las que quieres identificar el ovulo");
+ovulo = teclado.next();
+	set_idOvulo(ovulo);
+	setOcupacion("alfa ");
+System.out.println();
+ getNombre();
+System.out.println("idOvulo ");
+getidOvulo();
+System.out.println("Ocupacion ");
+ getOcupacion();
+
+}
 
 
  
@@ -194,7 +232,21 @@ public void Condicionar(){
 
 
 
+public void getFichaTecnica(){
+setNombre();
+String ovulo;
+System.out.println("Ingresa las primeras 3 letras con las que quieres identificar el ovulo");
+ovulo = teclado.next();
+	set_idOvulo(ovulo);
+	setOcupacion("alfa ");
+System.out.println();
+ getNombre();
+System.out.println("idOvulo ");
+getidOvulo();
+System.out.println("Ocupacion ");
+ getOcupacion();
 
+}
 
 
 
@@ -214,15 +266,14 @@ public void Condicionar(){
 */
 
 public String generaRandom( int longitud ){
-	 Random rand = new Random();
  	this.caracteres = caracteres;
   
     String generado ="";
 	
-    int length = rand.nextInt(longitud);
-    char [] text  = new char [length];
+    
+    char [] text  = new char [longitud];
 
-    for(int i=0;i<length;i++)
+    for(int i=0;i<longitud;i++)
         text[i]=caracteres.charAt(rand.nextInt(caracteres.length()));
     for(int i = 0; i < text.length;i++)
        generado += text[i];
