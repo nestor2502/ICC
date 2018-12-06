@@ -123,26 +123,7 @@ System.out.println("Presiona Enter para continuar");
          System.out.println("En este espacio podras personalizar tu dado");
          System.out.println("cambiando el color, y numero de caras");
 	     System.out.println();
-	     System.out.println("Los colores disponibles son : "
-			+"\n1) Blanco "
-			+"\n2) Rojo "
-		    +"\n3) Azul "
-		    +"\n4) Morado "
-		    +"\n5) Marrón  "
-		    +"\n6) Rosado "
-		    +"\n7) Verde "
-		    +"\n8) Negro "
-		    +"\n9) Celeste "
-		    +"\n10) Mostaza "
-		    +"\n11) Amarillo "
-		    +"\n12) Naranja "
-		    +"\n13) Lila "
-		    +"\n14) Plateado "
-		    +"\n15) Verde limón "
-		    +"\n16) Rojo intenso "
-		    +"\n17) Melón "
-			+"\n18) Negro oscuro "  
-		    +"\n19) Dorado ");
+	    dado2.getColores();
 	     color = teclado.nextInt();
 	     System.out.println();
 	     if(color <=19){
@@ -178,26 +159,7 @@ System.out.println("Presiona Enter para continuar");
 				     System.out.println("3) Volver a lanzar");
 				     opc2= teclado.nextInt();
 			     if (opc2==1){
-			     	 System.out.println("Los colores disponibles son : "
-				     +"\n1) Blanco "
-				     +"\n2) Rojo "
-			         +"\n3) Azul "
-			         +"\n4) Morado "
-			         +"\n5) Marrón  "
-			         +"\n6) Rosado "
-			         +"\n7) Verde "
-			         +"\n8) Negro "
-			         +"\n9) Celeste "
-			         +"\n10) Mostaza "
-			         +"\n11) Amarillo "
-			         +"\n12) Naranja "
-			         +"\n13) Lila "
-			         +"\n14) Plateado "
-			         +"\n15) Verde limón "
-			         +"\n16) Rojo intenso "
-			         +"\n17) Melón "
-				     +"\n18) Negro oscuro "  
-			         +"\n19) Dorado ");
+			     	 dado2.getColores();
 			     System.out.println();
 			     System.out.println("Ingresa el numero del nuevo color ");	
 			     color2= teclado.nextInt();

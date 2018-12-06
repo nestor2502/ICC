@@ -87,7 +87,30 @@ public class Dado {
     public void setBalanceado(int[] probabilidad) {
 	//implementación EXTRA
     }
+    public void getColores(){
 
+    System.out.println();
+         System.out.println("Los colores disponibles son : "
+            +"\n1) Blanco "
+            +"\n2) Rojo "
+            +"\n3) Azul "
+            +"\n4) Morado "
+            +"\n5) Marrón  "
+            +"\n6) Rosado "
+            +"\n7) Verde "
+            +"\n8) Negro "
+            +"\n9) Celeste "
+            +"\n10) Mostaza "
+            +"\n11) Amarillo "
+            +"\n12) Naranja "
+            +"\n13) Lila "
+            +"\n14) Plateado "
+            +"\n15) Verde limón "
+            +"\n16) Rojo intenso "
+            +"\n17) Melón "
+            +"\n18) Negro oscuro ");  
+
+    }
     /**
      * Modifica el color
      *
